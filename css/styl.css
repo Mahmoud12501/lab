@@ -1,0 +1,181 @@
+:root{
+    --light-sky:#17BCB0;
+    --dark-sky:#07ACA0;
+    --main-color:#3E5161;
+    --gray-color:#E9E9E9;
+    --dark-gray:#777778;
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    10. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  a{
+    display: block ;
+    text-decoration: none;
+  }
+
+/* start nav */
+.navbar{
+    background-color: #F8F9FA;
+}
+.navbar .container{
+    
+}
+.navbar  .navbar-brand{
+    color: var(--dark-sky);
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 90px;
+}
+.navbar .navbar-nav .nav-link {
+    color: var(--dark-gray);
+    transition: .3s;
+    font-weight: bold;
+    height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--light-sky);
+    
+
+}
+.navbar .navbar-nav .nav-link::before{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: var(--dark-sky);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: .3s;
+}
+.navbar .navbar-nav .nav-link:hover:before{
+    left: 0;
+}
+/* end nav */
+/* start landing */
+.carousel-inner {
+    height: 60vh; /* 60% of the viewport height */
+  }
+
+  @media (max-width:768px) {
+    .carousel-inner {
+        height:40vh; /* 60% of the viewport height */
+      }
+    
+  }
+  @media (max-width:576px) {
+    .carousel-inner {
+        height:30vh; /* 60% of the viewport height */
+      }
+    
+  }
+  @media (max-width:350px) {
+    .carousel-inner {
+        height:20vh; /* 60% of the viewport height */
+      }
+    
+  }
+
+
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Keeps image proportional and fills the container */
+  }
+/* end landing */
+/* start featurs */
+.featurs{
+    padding: 3rem 0;
+}
+.featurs .container{
+ 
+}
+.featurs .container .card{
+    background-color: var(--light-sky);
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+.featurs .container svg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--dark-sky);
+    color: white;
+}
+/* end featurs */
+/* start pricing */
+.pricing h2{
+    font-weight: 600;
+}
+.pricing h2 span{
+    color: var(--dark-sky);
+}
+/* end pricing */
+.color
+{
+    color: var(--light-sky);
+    
+}
+.pricing .btn-primary{
+    background-color: var(--light-sky);
+    border-color: var(--light-sky);
+}
